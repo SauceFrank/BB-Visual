@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-31T13:52:46Z" name="Surefire suite" finished-at="2024-05-31T13:53:16Z" duration-ms="30449">
+    <groups>
+    </groups>
+    <test started-at="2024-05-31T13:52:46Z" name="Surefire test" finished-at="2024-05-31T13:53:16Z" duration-ms="30449">
+      <class name="com.bb.BBTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.bb.BBTest@2ea227af]" started-at="2024-05-31T09:52:46Z" name="init" finished-at="2024-05-31T09:52:46Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.woot.WootTest@4386f16]" started-at="2024-05-31T09:52:46Z" name="init" finished-at="2024-05-31T09:52:46Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="BBPageTitle(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.bb.BBTest@2ea227af]" started-at="2024-05-31T09:52:46Z" name="BBPageTitle" data-provider="hardCodedBrowsers" finished-at="2024-05-31T09:52:56Z" duration-ms="10369" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[browser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[MicrosoftEdge]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[124]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Windows 10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[public void com.bb.BBTest.BBPageTitle(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Best Buy | Official Online Store | Shop Now & Save] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Best Buy | Official Online Store | Shop Now & Save] but found []
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.bb.BBTest.BBPageTitle(BBTest.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BBPageTitle -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bb.BBTest@2ea227af]" started-at="2024-05-31T09:52:56Z" name="tearDown" finished-at="2024-05-31T09:52:57Z" duration-ms="515" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BBPageTitle status=FAILURE method=BBTest.BBPageTitle(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.bb.BBTest@2ea227af] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bb.BBTest@2ea227af]" started-at="2024-05-31T09:53:17Z" name="tearDown" finished-at="2024-05-31T09:53:17Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.woot.WootTest@4386f16]" started-at="2024-05-31T09:53:17Z" name="tearDown" finished-at="2024-05-31T09:53:17Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.bb.BBTest -->
+      <class name="com.woot.WootTest">
+        <test-method signature="WootPageTitle(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.woot.WootTest@4386f16]" started-at="2024-05-31T09:52:46Z" name="WootPageTitle" data-provider="hardCodedBrowsers" finished-at="2024-05-31T09:53:16Z" duration-ms="29689" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[browser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[MicrosoftEdge]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[124]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Windows 10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[public void com.woot.WootTest.WootPageTitle(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WootPageTitle -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.woot.WootTest@4386f16]" started-at="2024-05-31T09:53:16Z" name="tearDown" finished-at="2024-05-31T09:53:16Z" duration-ms="692" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=WootPageTitle status=SUCCESS method=WootTest.WootPageTitle(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.woot.WootTest@4386f16] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.woot.WootTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

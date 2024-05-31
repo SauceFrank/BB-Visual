@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: com.amtrak.AmtrakTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 182.405 sec <<< FAILURE! - in com.amtrak.AmtrakTest
+WootPageTitle(com.amtrak.AmtrakTest)  Time elapsed: 181.929 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at com.amtrak.AmtrakTest.createDriver(AmtrakTest.java:91)
+	at com.amtrak.AmtrakTest.WootPageTitle(AmtrakTest.java:129)
+Caused by: org.openqa.selenium.TimeoutException: 
+java.util.concurrent.TimeoutException
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SL-2037', ip: '2603:9000:e800:bbd9:48bc:7dfa:107f:bde3%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '11.0.9'
+Driver info: driver.version: RemoteWebDriver
+	at com.amtrak.AmtrakTest.createDriver(AmtrakTest.java:91)
+	at com.amtrak.AmtrakTest.WootPageTitle(AmtrakTest.java:129)
+Caused by: java.util.concurrent.TimeoutException
+	at com.amtrak.AmtrakTest.createDriver(AmtrakTest.java:91)
+	at com.amtrak.AmtrakTest.WootPageTitle(AmtrakTest.java:129)
+
+tearDown(com.amtrak.AmtrakTest)  Time elapsed: 181.929 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.amtrak.AmtrakTest.tearDown(AmtrakTest.java:113)
+

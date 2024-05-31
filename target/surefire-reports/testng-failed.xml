@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="100" parallel="methods" name="Failed suite [Surefire suite]" verbose="0">
+  <test parallel="methods" name="Surefire test(failed)">
+    <classes>
+      <class name="com.woot.WootTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.woot.WootTest -->
+      <class name="com.bb.BBTest">
+        <methods>
+          <include name="init"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="BBPageTitle" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.bb.BBTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

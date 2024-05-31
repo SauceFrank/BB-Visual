@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 30.984 sec <<< FAILURE! - in TestSuite
+BBPageTitle(com.bb.BBTest)  Time elapsed: 10.397 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Best Buy | Official Online Store | Shop Now & Save] but found []
+	at com.bb.BBTest.BBPageTitle(BBTest.java:155)
+

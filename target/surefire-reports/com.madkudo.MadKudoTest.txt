@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.madkudo.MadKudoTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 167.333 sec - in com.madkudo.MadKudoTest
