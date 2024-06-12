@@ -11,11 +11,14 @@ import org.testng.annotations.Test;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.*;
 import com.saucelabs.visual.testng.TestMetaInfoListener;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 import static org.testng.Assert.assertEquals;
+import com.saucelabs.visual.CheckOptions;
+import com.saucelabs.visual.model.IgnoreRegion;
 
 public class BBTest {
     //Environment variable for user and Sauce_accesskey
@@ -78,7 +81,7 @@ public class BBTest {
 
         capabilities.setCapability("username", sauce_username);
         capabilities.setCapability("accesskey", sauce_accesskey);
-//        capabilities.setCapability("tunnelIdentifier","FrankTunnel");
+        capabilities.setCapability("tunnelIdentifier","MySCTunnel");
         String jobName = methodName;
         capabilities.setCapability("name", jobName);
 
@@ -94,13 +97,20 @@ public class BBTest {
         //US
         //Creates Selenium Driver
         //capabilities.setCapability("sauce:options", capabilities);
-
+        CheckOptions options = new CheckOptions();
+        IgnoreRegion ignoreRegion = new IgnoreRegion(
+                0, // x
+                0,  // y
+                1001, // width
+                159 // height
+        );
+        options.setIgnoreRegions(List.of(ignoreRegion));
         URL url = new URL("https://ondemand.us-west-1.saucelabs.com/wd/hub");
         driver = new RemoteWebDriver(url, capabilities);
         visual = new VisualApi.Builder(driver, sauceUsername, sauceAccessKey, DataCenter.US_WEST_1)
-                .withBuild("BB Test")
-                .withBranch("bb")
-                .withProject("BB Example")
+                .withBuild("Top Deals Test")
+                .withBranch("main")
+                .withProject("Best Buy Example")
                 .withCaptureDom(true)
                 .build();
         // EU
@@ -151,9 +161,9 @@ public class BBTest {
     @Test(dataProvider = "hardCodedBrowsers")
     public void BBPageTitle (String type, String browser, String version, String os, String device, Method method) throws Exception {
         WebDriver driver = createDriver(type, browser, version, os, device, method.getName());
-        driver.get("https://www.bestbuy.com/");
-        assertEquals(driver.getTitle(), "Best Buy | Official Online Store | Shop Now & Save");
-        visual.sauceVisualCheck("BB Page");
+        driver.get("http://192.168.0.203:8080/");
+        assertEquals(driver.getTitle(), "Top Deals and Featured Offers on Electronics - Best Buy");
+        visual.sauceVisualCheck("BB Top Deals Page");
     }
 
     /**
