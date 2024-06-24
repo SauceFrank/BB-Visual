@@ -97,7 +97,7 @@ public class BBTest {
         //US
         //Creates Selenium Driver
         //capabilities.setCapability("sauce:options", capabilities);
-        CheckOptions options = new CheckOptions();
+/*        CheckOptions options = new CheckOptions();
         IgnoreRegion ignoreRegion = new IgnoreRegion(
                 0, // x
                 0,  // y
@@ -105,6 +105,7 @@ public class BBTest {
                 159 // height
         );
         options.setIgnoreRegions(List.of(ignoreRegion));
+        */
         URL url = new URL("https://ondemand.us-west-1.saucelabs.com/wd/hub");
         driver = new RemoteWebDriver(url, capabilities);
         visual = new VisualApi.Builder(driver, sauceUsername, sauceAccessKey, DataCenter.US_WEST_1)
