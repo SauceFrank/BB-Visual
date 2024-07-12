@@ -95,7 +95,7 @@ public class BBTest {
         }
 
         //US
-        //Creates Selenium Driver
+        //Set ignore region. This is handled via the UI now
         //capabilities.setCapability("sauce:options", capabilities);
 /*        CheckOptions options = new CheckOptions();
         IgnoreRegion ignoreRegion = new IgnoreRegion(
@@ -106,6 +106,7 @@ public class BBTest {
         );
         options.setIgnoreRegions(List.of(ignoreRegion));
         */
+        //Creates Selenium Driver
         URL url = new URL("https://ondemand.us-west-1.saucelabs.com/wd/hub");
         driver = new RemoteWebDriver(url, capabilities);
         visual = new VisualApi.Builder(driver, sauceUsername, sauceAccessKey, DataCenter.US_WEST_1)
