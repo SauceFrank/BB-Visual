@@ -46,21 +46,21 @@ public class BBTest {
 //                new Object[]{"browser","chrome", "latest-1", "Windows 10",""},
                 new Object[]{"browser","MicrosoftEdge", "124", "Windows 10",""},
 //                new Object[]{"browser","firefox", "latest-2", "Windows 10",""},
-/*
+
                 // Mac
-                new Object[]{"browser","safari", "latest", "macOS 10.13",""},
-                new Object[]{"browser","chrome", "latest", "macOS 10.14",""},
-                new Object[]{"browser","firefox", "latest", "macOS 10.14",""},
-                new Object[]{"browser","chrome", "latest", "OS X 10.14",""},
+//                new Object[]{"browser","safari", "latest", "macOS 10.13",""},
+//                new Object[]{"browser","chrome", "latest", "macOS 10.14",""},
+//                new Object[]{"browser","firefox", "latest", "macOS 10.14",""},
+//                new Object[]{"browser","chrome", "latest", "OS X 10.14",""},
 
                 //Devices
-                new Object[]{"device","", "", "Android","Samsung Galaxy S22"},
-                new Object[]{"device","", "", "iOS", "iPhone 14 Pro Max.*"},
-                new Object[]{"device","", "", "iOS", "iPad 10.2"},
-                new Object[]{"device","", "", "Android","Samsung.*"},
-                new Object[]{"device","", "", "iOS", "iPhone.*"},
-                new Object[]{"device","", "", "Android","Google.*"},
-                new Object[]{"device","", "", "iOS", "iPad.*"}, */
+//                new Object[]{"device","", "", "Android","Samsung Galaxy S22"},
+//                new Object[]{"device","", "", "iOS", "iPhone 14 Pro Max.*"},
+//                new Object[]{"device","", "", "iOS", "iPad 10.2"},
+//                new Object[]{"device","", "", "Android","Samsung.*"},
+//                new Object[]{"device","", "", "iOS", "iPhone.*"},
+//                new Object[]{"device","", "", "Android","Google.*"},
+//                new Object[]{"device","", "", "iOS", "iPad.*"},
         };
     }
 
@@ -95,7 +95,7 @@ public class BBTest {
         }
 
         //US
-        //Set ignore region. This is handled via the UI now
+        //Sets ignore regions. This is done the UI now
         //capabilities.setCapability("sauce:options", capabilities);
 /*        CheckOptions options = new CheckOptions();
         IgnoreRegion ignoreRegion = new IgnoreRegion(
@@ -105,7 +105,7 @@ public class BBTest {
                 159 // height
         );
         options.setIgnoreRegions(List.of(ignoreRegion));
-        */
+*/
         //Creates Selenium Driver
         URL url = new URL("https://ondemand.us-west-1.saucelabs.com/wd/hub");
         driver = new RemoteWebDriver(url, capabilities);
@@ -127,7 +127,8 @@ public class BBTest {
         //For CI plugins
         String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s", id, jobName);
         System.out.println(message);
-
+        CheckOptions options = new CheckOptions();
+        options.setCaptureDom(true);
         return driver;
     }
 
@@ -163,7 +164,8 @@ public class BBTest {
     @Test(dataProvider = "hardCodedBrowsers")
     public void BBPageTitle (String type, String browser, String version, String os, String device, Method method) throws Exception {
         WebDriver driver = createDriver(type, browser, version, os, device, method.getName());
-        driver.get("http://192.168.0.203:8080/");
+        driver.get("http://192.168.4.25:8080/");
+//       driver.get("https://www.bestbuy.com/site/electronics/top-deals/pcmcat1563299784494.c?id=pcmcat1563299784494");
         assertEquals(driver.getTitle(), "Top Deals and Featured Offers on Electronics - Best Buy");
         visual.sauceVisualCheck("BB Top Deals Page");
     }
